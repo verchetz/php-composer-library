@@ -3,10 +3,14 @@
 namespace Programmer\Belajar{
 
     class Customer{
-        public function __construct($name)
+
+        public $name;
+
+        public function __construct($name = 'anon')
         {
+            $this->name = $name;
         }
-        public function hello($name)
+        public function hello($name = "guest")
         {
             return "Hello $name, my name is $this->name";
         }
